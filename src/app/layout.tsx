@@ -1,3 +1,7 @@
+import CurrencySelect from '../components/currency-select'
+import DataPlanFilters from '../components/data-plan-filters'
+import Dataplans from '../components/data-plans'
+import ISPServices from '../components/isp-services'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -16,14 +20,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className + " flex flex-auto"}>
-      <nav className='border- p-8' >
-        <div>Currency Select</div>
-        <div>ISP and Service Select</div>
-      </nav>
-      <main>
-        {children}
-        <div>Plan Filters</div>
-      </main>
+        <nav className='border- p-8' >
+          <CurrencySelect />
+          <ISPServices />
+        </nav>
+        <main>
+          {children}
+          <DataPlanFilters />
+          <Dataplans />
+        </main>
       </body>
     </html>
   )

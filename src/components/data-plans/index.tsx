@@ -1,4 +1,5 @@
 import mockDataplans from "./mock-dataplans";
+import SinglePlanRow from "./single-plan-row";
 
 function TableHeader() {
     return <thead>
@@ -17,12 +18,7 @@ export default function Dataplans() {
         <TableHeader />
         <tbody>
             {mockDataplans.map((plan, index) => {
-                return <tr key={index} >
-                    <td>{plan.name}</td>
-                    <td>{plan.duration.value+ " "+ plan.duration.unit}</td>
-                    <td>{plan.volume.value+ " "+ plan.volume.unit}</td>
-                    <td>{plan.price.value+ " "+ plan.price.currency}</td>
-                </tr>
+                return <SinglePlanRow key={index} plan={plan} />
             })}
         </tbody>
     </table>)

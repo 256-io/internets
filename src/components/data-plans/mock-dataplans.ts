@@ -1,28 +1,3 @@
-type Dataplan = {
-    providerId: string;
-    serviceId: string;
-    name: string;
-    description: string;
-    website?: string;
-    logo?: string;
-    banner?: string;
-    price: {
-        value: number;
-        currency: string;
-    }
-    volume: {
-        value: number;
-        unit: string;
-    }
-    duration: {
-        value: number;
-        unit: string;
-    }
-    speed?: {
-        value: number;
-        unit: string;
-    }
-}
 const mockDataplans: Dataplan[] = [
     {
         providerId: 'vodafone',
@@ -59,7 +34,7 @@ const mockDataplans: Dataplan[] = [
         banner: 'https://cdn.ispcompare.xyz/banners/spark.svg',
         price: {
             value: 99.99,
-            currency: 'USD'
+            currency: 'KES'
         },
         volume: {
             value: 1000,
@@ -84,7 +59,7 @@ const mockDataplans: Dataplan[] = [
         banner: 'https://cdn.ispcompare.xyz/banners/2degrees.svg',
         price: {
             value: 99.99,
-            currency: 'USD'
+            currency: 'UGX'
         },
         volume: {
             value: 1000,
@@ -109,7 +84,7 @@ const mockDataplans: Dataplan[] = [
         banner: 'https://cdn.ispcompare.xyz/banners/bigpipe.svg',
         price: {
             value: 99.99,
-            currency: 'USD'
+            currency: 'JPY'
         },
         volume: {
             value: 1000,
